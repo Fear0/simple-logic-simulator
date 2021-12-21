@@ -1,0 +1,128 @@
+{
+    "version": "2.0.0",
+    "command": "bash",
+    "tasks": [
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+            "group": "build"
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "make clean",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+            "group": "build"
+        },
+        {
+            "label": "circuit01",
+            "type": "shell",
+            "command": "./eda-lab ../examples/circuit01.yal CIRCUIT01 ../examples/library.yal",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+			"dependsOn": [
+				"make"
+			],
+            "group": "test"
+        },
+        {
+            "label": "circuit02",
+            "type": "shell",
+            "command": "./eda-lab ../examples/circuit02.yal CIRCUIT02 ../examples/library.yal",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+			"dependsOn": [
+				"make"
+			],
+            "group": "test"
+        },
+        {
+            "label": "circuit03",
+            "type": "shell",
+            "command": "./eda-lab ../examples/circuit03.yal CIRCUIT03 ../examples/library.yal",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+			"dependsOn": [
+				"make"
+			],
+            "group": "test"
+        },
+        {
+            "label": "circuit04",
+            "type": "shell",
+            "command": "./eda-lab ../examples/circuit04.yal CIRCUIT04 ../examples/library.yal",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+			"dependsOn": [
+				"make"
+			],
+            "group": "test"
+        },
+        {
+            "label": "circuit05",
+            "type": "shell",
+            "command": "./eda-lab ../examples/circuit05.yal CIRCUIT05 ../examples/library.yal",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+			"dependsOn": [
+				"make"
+			],
+            "group": "test"
+        },
+        {
+            "label": "rca",
+            "type": "shell",
+            "command": "./eda-lab ../examples/rca.yal RCA ../examples/library.yal",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "base": "$gcc"
+            },
+			"dependsOn": [
+				"make"
+			],
+            "group": "test"
+        }
+    ]
+}
